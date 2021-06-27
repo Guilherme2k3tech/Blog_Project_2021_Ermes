@@ -1,11 +1,15 @@
 import React from "react"
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { auth } from "../components/firebase";
-import { Button } from "antd";
+import { Button, Affix } from "antd";
 import App from "../App";
 import "../index.css"
 
+
 const MainAPP = () =>{
+
+    const [bottom, setBottom] = useState(10);
 
     const history = useHistory();
 
@@ -13,6 +17,8 @@ const MainAPP = () =>{
         await auth.signOut();
 
         history.push("/")
+
+
     }
     return(
         
@@ -21,10 +27,17 @@ const MainAPP = () =>{
                 
                 <App/>
 
+
                 <div>
 
-                <Button  onClick={handleLogout} className="Botão-Logout" type="primary" danger  >Sair</Button>
-                </div>      
+                    <Affix offsetBottom={bottom}>
+                    <Button type="primary" shape="round" danger onClick={() => setBottom(bottom + 10)} onDoubleClick={handleLogout}>Sair </Button>
+                    </Affix>
+
+
+
+                </div>   
+                   
             </div>
             
     );

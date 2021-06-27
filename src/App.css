@@ -55,20 +55,23 @@
 .postButton{
   color:#6d04c2
 }
-
 .homeStyle{
   position: absolute;
+  scroll-behavior:smooth
+
 }
 
 .artigoStyle{
   position: absolute;
   left: 1190px;
+  scroll-behavior:smooth
+
 }
 
 .sobreStyle{
   position: relative;
   left: 1190px;
- 
+  scroll-behavior:smooth
 }
 .LoginStyle{
   position: absolute;
@@ -78,8 +81,40 @@
  
 }
 
+.titulo-Artigo{
+    margin: auto;
+    width: 300%;
+    border: 0px solid #ffffff;
+    padding: 1px;
+    position: absolute;
+    top:150px;
+    left: 600px;
+    
 
+}
 
+.Home{
+  scroll-behavior:smooth;
+}
+
+.ImagePost{
+  align-items: center;
+  position: absolute;
+  left: 950px;
+  top: 180px;
+}
+
+.PostTitle{
+  position: absolute;
+  left: 300px;
+  top: -50px;
+  border-style:solid;
+}
+.PostLegend{
+  position: relative;
+  left: 100px;
+  top: 200px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

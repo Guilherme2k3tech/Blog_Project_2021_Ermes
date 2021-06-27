@@ -2,6 +2,9 @@ import React from "react";
 import './App.css';
 import { Table, Button, Form, Input, Modal, Select, Layout, Menu, Breadcrumb, Image, Carousel, Calendar, Typography, Checkbox, Tooltip, Comment, Avatar, List } from 'antd';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import MainPage from "../src/Páginas/MainPage"
+import Commentario from '../src/components/Comments'
+
 
 
 
@@ -27,7 +30,7 @@ const tailLayout = {
 function TitlePage() {
   return (
     <>
-      <Title style={{ left: 0 }} >Home</Title>
+      <Title className>Posts</Title>
     </>
   )
 }
@@ -39,56 +42,46 @@ const RouterApp = () => {
         <nav>
           <ul>
             <div className="homeStyle">
-              <Link to="/Home"><Button type="primary">Home</Button></Link>
+              <Link to="/CriarPost"><Button type="primary">Criar</Button></Link>
             </div>
             <div className="artigoStyle">
-              <Link to="/Artigos"><Button type="primary">Artigos</Button></Link>
+              <Link to="/CriarPost"><Button type="primary"></Button></Link>
             </div>
             <div className="sobreStyle">
-              <Link to="/Login"><Button type="link"></Button></Link>
+              <Link><Button type="primary" ></Button></Link>
             </div>
 
           </ul>
         </nav>
         <Switch>
-          <Route path="/Home">
-            <Home />
+          <Route path="/MainPosts">
+            <Criar/>
           </Route>
-          <Route path="/Artigos">  
-            <Users /> 
-          </Route> 
-     
+          <Route path="/MainPage">  
+            <Criar /> 
+          </Route>
         </Switch>
       </div>
     </Router>)
 }
 
-function Home() {
+function MainPosts() {
   return (
     <Layout>
-      <Content className="site-layout-content" style={{ padding: '0 50px' }}>
-        <div className="site-layout-background">
-          <div className="Home">
-            <TitlePage style={{ left: 0 }} />
-            <p>Home</p>
-          </div>
-        </div>
-      </Content>
-    </Layout>
+    <Content >
+      <div>
+      </div>
+    </Content>
+  </Layout>
 
   )
 }
 
-function Users() {
+function Criar() {
   return (
-    <Layout>
-    <Content className="site-layout-content" style={{ padding: '0 50px' }}>
-      <div className="site-layout-background">
-        <div className="Home">
-        </div>
-      </div>
-    </Content>
-  </Layout>
+    <>
+
+    </>
 
   )
 }
@@ -102,17 +95,22 @@ const LayoutPage = () => {
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
         </Menu>
       </Header>
-      <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+      <Content className="site-layout" style={{ padding: '0 50px', marginTop: 10 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-
+        <MainPage/>
 
         </div>
+        <br></br>
+        <br></br>
+
+      
+        <Commentario/>
+
       </Content>
       <Footer style={{ textAlign: 'center' }}>Spott ©2021</Footer>
     </Layout>
   )
 }
-
 
 function App() {
   return (
