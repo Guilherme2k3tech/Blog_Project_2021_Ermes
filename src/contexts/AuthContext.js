@@ -16,12 +16,23 @@ export const AuthProvider = ({ children }) => {
           setUser(user);
           setLoading(false);
 
-          if(user) history.push('/MainAPP');
+          if(user ){
+          if(user && user.email === "prodgmk@gmail.com"){
+           history.push('/Admin');
+          }
+          else{
+            history.push('/MainAPP');
+          }
+        }
+        else{
+          history.push("/")
+        }
         
     })
   }, [user, history])
 
   const value = {user};
+  
 
   return (
     <AuthContext.Provider value={value}>

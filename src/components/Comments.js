@@ -20,7 +20,7 @@ const CommentList = ({ comments }) => (
       </Form.Item>
       <Form.Item>
         <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
-          Add Comment
+          Enviar Comentário
         </Button>
       </Form.Item>
     </>

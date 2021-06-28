@@ -3,7 +3,7 @@
     margin: 0px 25px 40px 25px;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     left: 360px;
     top: 150px;
     
@@ -65,7 +65,7 @@
   }
 
   .Image-Post{
-      position: absolute;
-      left: 400px;
-      top: 45px;
+      position: relative;
+      left: 100px;
+      top: 20px;
   }

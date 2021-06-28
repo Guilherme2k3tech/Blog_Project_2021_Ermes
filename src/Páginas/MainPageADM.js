@@ -1,4 +1,4 @@
-import { Image } from "antd";
+import { Image, Button} from "antd";
 import { useState } from "react";
 import "./MainPage.css";
 import Like from "../components/Like"
@@ -27,8 +27,8 @@ function Post({img, title, time, description, id, handleDelete}) {
         <p className="postDesc">
           {description}
         </p>
-      <Commentario/>
-      <Like/>
+        <Button type="primary" danger onClick={() => handleDelete(id)}>Deletar</Button>
+
       </div>
     </>
   );

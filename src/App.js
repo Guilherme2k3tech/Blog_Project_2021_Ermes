@@ -4,6 +4,7 @@ import { Table, Button, Form, Input, Modal, Select, Layout, Menu, Breadcrumb, Im
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MainPage from "../src/Páginas/MainPage"
 import Commentario from '../src/components/Comments'
+import Posts from "../src/Páginas/MainPage"
 
 
 
@@ -98,16 +99,15 @@ const LayoutPage = () => {
       <Content className="site-layout" style={{ padding: '0 50px', marginTop: 10 }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         <MainPage/>
+        <Posts/>
 
         </div>
         <br></br>
         <br></br>
 
       
-        <Commentario/>
-
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Spott ©2021</Footer>
+
     </Layout>
   )
 }

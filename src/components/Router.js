@@ -1,16 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthProvider } from "../contexts/AuthContext.js"
-import MainAPP from "../components/Chats"
-import Login from "../components/Login"
+import {MainAPP} from "./Separator"
+import {MainAPPADM} from "./Separator"
+import Login from "./Login"
 
-function Chat() {
+function Roteador() {
   return (
     <div style={{ fontFamily: 'Avenir' }}>
       <Router>
         <AuthProvider>
           <Switch>
-            <Route path="/MainAPP"component={MainAPP} />
+            <Route exact path="/MainAPP"component={MainAPP} />
+            <Route exact path="/Admin"component={MainAPPADM} />
             <Route path="/" component={Login} />
           </Switch>
         </AuthProvider>
@@ -19,4 +21,4 @@ function Chat() {
   )
 }   
  
-export default Chat;
+export default Roteador;
